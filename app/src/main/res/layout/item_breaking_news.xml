@@ -9,46 +9,30 @@
     app:cardElevation="0dp"
     android:id="@+id/breaking_news_item">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/news_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:contentDescription="News Image"/>
 
-            <ImageView
-                android:id="@+id/news_image"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:contentDescription="News Image"/>
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/news_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/bookmark_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="top|end"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_bookmark_border"
-            android:contentDescription="Bookmark"/>
-
-    </FrameLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView> 

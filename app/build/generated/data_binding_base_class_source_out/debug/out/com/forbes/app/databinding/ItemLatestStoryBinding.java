@@ -4,7 +4,6 @@ package com.forbes.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,9 +21,6 @@ public final class ItemLatestStoryBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final ImageButton bookmarkButton;
-
-  @NonNull
   public final TextView storyAuthor;
 
   @NonNull
@@ -33,10 +29,9 @@ public final class ItemLatestStoryBinding implements ViewBinding {
   @NonNull
   public final TextView storyTitle;
 
-  private ItemLatestStoryBinding(@NonNull CardView rootView, @NonNull ImageButton bookmarkButton,
-      @NonNull TextView storyAuthor, @NonNull ImageView storyImage, @NonNull TextView storyTitle) {
+  private ItemLatestStoryBinding(@NonNull CardView rootView, @NonNull TextView storyAuthor,
+      @NonNull ImageView storyImage, @NonNull TextView storyTitle) {
     this.rootView = rootView;
-    this.bookmarkButton = bookmarkButton;
     this.storyAuthor = storyAuthor;
     this.storyImage = storyImage;
     this.storyTitle = storyTitle;
@@ -69,12 +64,6 @@ public final class ItemLatestStoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bookmark_button;
-      ImageButton bookmarkButton = ViewBindings.findChildViewById(rootView, id);
-      if (bookmarkButton == null) {
-        break missingId;
-      }
-
       id = R.id.story_author;
       TextView storyAuthor = ViewBindings.findChildViewById(rootView, id);
       if (storyAuthor == null) {
@@ -93,8 +82,7 @@ public final class ItemLatestStoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemLatestStoryBinding((CardView) rootView, bookmarkButton, storyAuthor,
-          storyImage, storyTitle);
+      return new ItemLatestStoryBinding((CardView) rootView, storyAuthor, storyImage, storyTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

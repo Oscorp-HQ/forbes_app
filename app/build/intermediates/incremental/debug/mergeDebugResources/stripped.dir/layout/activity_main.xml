@@ -9,39 +9,62 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/forbes_black"
         app:elevation="0dp">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:tabTextColor="#666666"
-            app:tabSelectedTextColor="@color/black"
-            app:tabIndicatorColor="@color/black"
-            app:tabIndicatorHeight="2dp"
-            app:tabTextAppearance="@style/TabTextAppearance"
-            app:tabMode="fixed"
-            app:tabGravity="fill">
+            android:orientation="vertical">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
+            <!-- Forbes Logo -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:src="@drawable/forbes_logo_png"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:contentDescription="Forbes Logo"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LATEST"/>
+                android:background="@color/black"
+                android:paddingTop="4dp"
+                app:tabTextColor="#666666"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="2dp"
+                app:tabTextAppearance="@style/TabTextAppearance"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabInlineLabel="false"
+                app:tabIconTint="@color/tab_icon_color_selector"
+                app:tabPadding="4dp"
+                app:tabPaddingTop="8dp"
+                app:tabPaddingBottom="8dp">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MAGAZINE"/>
-                
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BOOKMARKS"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/latest_png"
+                    android:text="LATEST"/>
 
-        </com.google.android.material.tabs.TabLayout>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/magazine"
+                    android:text="MAGAZINE"/>
+                    
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/bookmark"
+                    android:text="BOOKMARKS"/>
 
+            </com.google.android.material.tabs.TabLayout>
+        </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -58,8 +81,9 @@
                 android:id="@+id/notification_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/black"
                 android:text="Tap Your Phone's Settings\nTo Turn On Notifications For\nBreaking News And Exclusives."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:gravity="center"
                 android:padding="24dp"/>
@@ -75,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Breaking News"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:paddingHorizontal="16dp"
@@ -96,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Latest Stories"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:paddingHorizontal="16dp"
@@ -107,7 +131,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clipToPadding="false"
-                    android:paddingHorizontal="16dp"/>
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="24dp"/>
 
             </LinearLayout>
 
@@ -123,7 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Bookmarked Stories"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:paddingHorizontal="16dp"

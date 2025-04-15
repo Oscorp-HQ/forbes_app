@@ -32,6 +32,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupTabLayout() {
+        // Set initial tab icons and text position
+        for (i in 0 until binding.tabLayout.tabCount) {
+            val tab = binding.tabLayout.getTabAt(i)
+            tab?.setIcon(when(i) {
+                0 -> R.drawable.latest_png
+                1 -> R.drawable.magazine
+                2 -> R.drawable.bookmark
+                else -> R.drawable.latest_png
+            })
+        }
+        
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.position) {
@@ -79,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         binding.latestStoriesRecycler.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
             adapter = latestStoriesAdapter
         }
 
