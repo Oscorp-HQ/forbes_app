@@ -4,6 +4,7 @@ package com.forbes.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -26,6 +27,9 @@ public final class ActivityNewsDetailBinding implements ViewBinding {
   public final AppBarLayout appBar;
 
   @NonNull
+  public final ImageButton detailBookmarkButton;
+
+  @NonNull
   public final TextView newsAuthor;
 
   @NonNull
@@ -44,11 +48,12 @@ public final class ActivityNewsDetailBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private ActivityNewsDetailBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppBarLayout appBar, @NonNull TextView newsAuthor, @NonNull TextView newsContent,
-      @NonNull TextView newsDate, @NonNull ImageView newsImage, @NonNull TextView newsTitle,
-      @NonNull Toolbar toolbar) {
+      @NonNull AppBarLayout appBar, @NonNull ImageButton detailBookmarkButton,
+      @NonNull TextView newsAuthor, @NonNull TextView newsContent, @NonNull TextView newsDate,
+      @NonNull ImageView newsImage, @NonNull TextView newsTitle, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.appBar = appBar;
+    this.detailBookmarkButton = detailBookmarkButton;
     this.newsAuthor = newsAuthor;
     this.newsContent = newsContent;
     this.newsDate = newsDate;
@@ -90,6 +95,12 @@ public final class ActivityNewsDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.detail_bookmark_button;
+      ImageButton detailBookmarkButton = ViewBindings.findChildViewById(rootView, id);
+      if (detailBookmarkButton == null) {
+        break missingId;
+      }
+
       id = R.id.news_author;
       TextView newsAuthor = ViewBindings.findChildViewById(rootView, id);
       if (newsAuthor == null) {
@@ -126,8 +137,8 @@ public final class ActivityNewsDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewsDetailBinding((CoordinatorLayout) rootView, appBar, newsAuthor,
-          newsContent, newsDate, newsImage, newsTitle, toolbar);
+      return new ActivityNewsDetailBinding((CoordinatorLayout) rootView, appBar,
+          detailBookmarkButton, newsAuthor, newsContent, newsDate, newsImage, newsTitle, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

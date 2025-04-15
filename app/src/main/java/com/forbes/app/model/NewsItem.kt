@@ -10,7 +10,8 @@ data class NewsItem(
     val author: String,
     val date: String,
     val content: String,
-    val category: NewsCategory
+    val category: NewsCategory,
+    val isBookmarked: Boolean = false
 ) : Serializable
 
 enum class NewsCategory {

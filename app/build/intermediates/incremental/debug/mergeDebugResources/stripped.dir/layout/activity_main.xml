@@ -13,7 +13,7 @@
         app:elevation="0dp">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
+            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -34,6 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MAGAZINE"/>
+                
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOOKMARKS"/>
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -74,6 +79,7 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:paddingHorizontal="16dp"
+                    android:paddingTop="16dp"
                     android:paddingBottom="16dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -98,6 +104,45 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/latest_stories_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="16dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bookmarks_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/bookmarked_stories_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bookmarked Stories"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/no_bookmarks_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No bookmarked stories yet"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="32dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bookmarked_stories_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clipToPadding="false"

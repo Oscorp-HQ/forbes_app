@@ -2718,6 +2718,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable forbes_logo
 drawable ic_arrow_back_black_24
+drawable ic_bookmark_border
+drawable ic_bookmark_filled
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2900,6 +2902,10 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bookmark_button
+id bookmarked_stories_recycler
+id bookmarked_stories_title
+id bookmarks_container
 id bottom
 id bounce
 id bounceBoth
@@ -2959,6 +2965,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detail_bookmark_button
 id dialog_button
 id dimensions
 id direct
@@ -3134,6 +3141,7 @@ id news_image
 id news_title
 id noScroll
 id noState
+id no_bookmarks_text
 id none
 id normal
 id north
@@ -3254,8 +3262,8 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id tabLayout
 id tabMode
-id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3449,6 +3457,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_bookmarked_story
 layout item_breaking_news
 layout item_latest_story
 layout item_magazine
