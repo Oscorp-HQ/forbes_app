@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.forbes.app-mergeReleaseResources-38:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/abrarahmed/.gradle/caches/8.10/transforms/ab53db8cb5626dbd0364741ba3c6204a/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/abrarahmed/.gradle/caches/8.10/transforms/0b5e06795e46d2217c4a5c18d8dd89a9/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}

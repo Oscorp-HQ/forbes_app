@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/item_latest_story.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/item_latest_story.xml"
+    },
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/activity_magazine_detail.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/activity_magazine_detail.xml"
+    },
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/activity_news_detail.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/activity_news_detail.xml"
+    },
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/activity_main.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/item_breaking_news.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/item_breaking_news.xml"
+    },
+    {
+        "merged": "com.forbes.app-mergeDebugResources-40:/layout/activity_main.xml",
+        "source": "com.forbes.app-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-mergeDebugResources-40:/layout/item_magazine.xml",
+        "source": "/Users/abrarahmed/.gradle/daemon/8.10/com.forbes.app-main-43:/layout/item_magazine.xml"
+    }
+]

@@ -48,9 +48,12 @@ class BreakingNewsAdapter(
 
         fun bind(item: NewsItem) {
             titleView.text = item.title
+            
+            // Load image with Glide and handle errors
             Glide.with(itemView.context)
                 .load(item.imageUrl)
-                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_foreground) // Use a placeholder while loading
+                .error(R.drawable.ic_launcher_foreground) // Use a fallback image if loading fails
                 .into(imageView)
         }
     }

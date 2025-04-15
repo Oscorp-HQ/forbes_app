@@ -1,0 +1,193 @@
+/Users/abrarahmed/Quash/forbes_app/app/src/main/AndroidManifest.xml: Error: When targeting Android 13 or higher, posting a permission requires holding the POST_NOTIFICATIONS permission (usage from com.bumptech.glide.request.target.NotificationTarget) [NotificationPermission]
+
+   Explanation for issues of type "NotificationPermission":
+   When targeting Android 13 and higher, posting permissions requires holding
+   the runtime permission android.permission.POST_NOTIFICATIONS.
+
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdkVersion 33
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:42: Warning: A newer version of androidx.core:core-ktx than 1.9.0 is available: 1.16.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:43: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:44: Warning: A newer version of com.google.android.material:material than 1.8.0 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.8.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:45: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:46: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.1 is available: 2.8.7 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:47: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.6.1 is available: 2.8.7 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:48: Warning: A newer version of androidx.activity:activity-ktx than 1.7.0 is available: 1.10.1 [GradleDependency]
+    implementation 'androidx.activity:activity-ktx:1.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:49: Warning: A newer version of androidx.fragment:fragment-ktx than 1.5.6 is available: 1.8.6 [GradleDependency]
+    implementation 'androidx.fragment:fragment-ktx:1.5.6'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:55: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/build.gradle:56: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/java/com/forbes/app/adapter/BreakingNewsAdapter.kt:21: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/drawable/ic_settings.xml:9: Warning: Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+        android:pathData="M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z"/>
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "VectorPath":
+   Using long vector paths is bad for performance. There are several ways to
+   make the pathData shorter:
+   * Using less precision
+   * Removing some minor details
+   * Using the Android Studio vector conversion tool
+   * Rasterizing the image (converting to PNG)
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:7: Warning: Possible overdraw: Root element paints background @color/black with a theme that also paints a background (inferred theme is @style/Theme.ForbesApp) [Overdraw]
+    android:background="@color/black">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/values/colors.xml:3: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:29: Warning: Hardcoded string "Forbes Logo", should use @string resource [HardcodedText]
+                android:contentDescription="Forbes Logo"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:38: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+                android:contentDescription="Search"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:47: Warning: Hardcoded string "Settings", should use @string resource [HardcodedText]
+                android:contentDescription="Settings"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:63: Warning: Hardcoded string "Latest", should use @string resource [HardcodedText]
+                android:text="Latest"/>
+                ~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:68: Warning: Hardcoded string "Magazine", should use @string resource [HardcodedText]
+                android:text="Magazine"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:88: Warning: Hardcoded string "Tap Your Phone's SettingsnTo Turn On Notifications FornBreaking News And Exclusives.", should use @string resource [HardcodedText]
+                android:text="Tap Your Phone's Settings\nTo Turn On Notifications For\nBreaking News And Exclusives."
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:98: Warning: Hardcoded string "Breaking News", should use @string resource [HardcodedText]
+                android:text="Breaking News"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/activity_main.xml:116: Warning: Hardcoded string "Latest Stories", should use @string resource [HardcodedText]
+                android:text="Latest Stories"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/abrarahmed/Quash/forbes_app/app/src/main/res/layout/item_breaking_news.xml:22: Warning: Hardcoded string "News Image", should use @string resource [HardcodedText]
+            android:contentDescription="News Image"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+1 errors, 26 warnings

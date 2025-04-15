@@ -2,12 +2,12 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="280dp"
-    android:layout_height="200dp"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
-    android:testId="breaking_news_item">
+    android:layout_width="320dp"
+    android:layout_height="240dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    android:id="@+id/breaking_news_item">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,22 +17,21 @@
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:scaleType="centerCrop"
-            android:contentDescription="News Image"
-            android:testId="breaking_news_image"/>
+            android:contentDescription="News Image"/>
 
         <TextView
             android:id="@+id/news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="16dp"
             android:maxLines="2"
             android:ellipsize="end"
             android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:testId="breaking_news_title"/>
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

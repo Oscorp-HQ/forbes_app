@@ -1,5 +1,7 @@
 package com.forbes.app.model
 
+import java.io.Serializable
+
 data class NewsItem(
     val id: String,
     val title: String,
@@ -9,7 +11,7 @@ data class NewsItem(
     val date: String,
     val content: String,
     val category: NewsCategory
-)
+) : Serializable
 
 enum class NewsCategory {
     BREAKING_NEWS,
