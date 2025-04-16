@@ -11,7 +11,8 @@ import com.forbes.app.R
 import com.forbes.app.model.NewsItem
 
 class LatestStoriesAdapter(
-    private val onItemClick: (NewsItem) -> Unit
+    private val onItemClick: (NewsItem) -> Unit,
+    private val onBookmarkClick: (NewsItem) -> Unit
 ) : RecyclerView.Adapter<LatestStoriesAdapter.ViewHolder>() {
 
     private var items: List<NewsItem> = emptyList()

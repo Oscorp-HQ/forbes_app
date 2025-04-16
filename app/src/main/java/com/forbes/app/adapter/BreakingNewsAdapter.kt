@@ -11,7 +11,8 @@ import com.forbes.app.R
 import com.forbes.app.model.NewsItem
 
 class BreakingNewsAdapter(
-    private val onItemClick: (NewsItem) -> Unit
+    private val onItemClick: (NewsItem) -> Unit,
+    private val onBookmarkClick: (NewsItem) -> Unit
 ) : RecyclerView.Adapter<BreakingNewsAdapter.NewsViewHolder>() {
 
     private var items: List<NewsItem> = emptyList()
@@ -52,8 +53,8 @@ class BreakingNewsAdapter(
             // Load image with Glide and handle errors
             Glide.with(itemView.context)
                 .load(item.imageUrl)
-                .placeholder(R.drawable.ic_launcher_foreground) // Use a placeholder while loading
-                .error(R.drawable.ic_launcher_foreground) // Use a fallback image if loading fails
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_launcher_foreground)
                 .into(imageView)
         }
     }

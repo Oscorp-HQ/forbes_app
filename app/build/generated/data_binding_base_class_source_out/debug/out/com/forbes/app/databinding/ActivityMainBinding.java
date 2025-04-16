@@ -23,6 +23,15 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final RecyclerView bookmarkedStoriesRecycler;
+
+  @NonNull
+  public final TextView bookmarkedStoriesTitle;
+
+  @NonNull
+  public final LinearLayout bookmarksContainer;
+
+  @NonNull
   public final RecyclerView breakingNewsRecycler;
 
   @NonNull
@@ -41,23 +50,32 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout magazineContainer;
 
   @NonNull
+  public final TextView noBookmarksText;
+
+  @NonNull
   public final TextView notificationText;
 
   @NonNull
   public final TabLayout tabLayout;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull RecyclerView breakingNewsRecycler, @NonNull TextView breakingNewsTitle,
-      @NonNull LinearLayout latestStoriesContainer, @NonNull RecyclerView latestStoriesRecycler,
-      @NonNull TextView latestStoriesTitle, @NonNull LinearLayout magazineContainer,
+      @NonNull RecyclerView bookmarkedStoriesRecycler, @NonNull TextView bookmarkedStoriesTitle,
+      @NonNull LinearLayout bookmarksContainer, @NonNull RecyclerView breakingNewsRecycler,
+      @NonNull TextView breakingNewsTitle, @NonNull LinearLayout latestStoriesContainer,
+      @NonNull RecyclerView latestStoriesRecycler, @NonNull TextView latestStoriesTitle,
+      @NonNull LinearLayout magazineContainer, @NonNull TextView noBookmarksText,
       @NonNull TextView notificationText, @NonNull TabLayout tabLayout) {
     this.rootView = rootView;
+    this.bookmarkedStoriesRecycler = bookmarkedStoriesRecycler;
+    this.bookmarkedStoriesTitle = bookmarkedStoriesTitle;
+    this.bookmarksContainer = bookmarksContainer;
     this.breakingNewsRecycler = breakingNewsRecycler;
     this.breakingNewsTitle = breakingNewsTitle;
     this.latestStoriesContainer = latestStoriesContainer;
     this.latestStoriesRecycler = latestStoriesRecycler;
     this.latestStoriesTitle = latestStoriesTitle;
     this.magazineContainer = magazineContainer;
+    this.noBookmarksText = noBookmarksText;
     this.notificationText = notificationText;
     this.tabLayout = tabLayout;
   }
@@ -89,6 +107,24 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bookmarked_stories_recycler;
+      RecyclerView bookmarkedStoriesRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (bookmarkedStoriesRecycler == null) {
+        break missingId;
+      }
+
+      id = R.id.bookmarked_stories_title;
+      TextView bookmarkedStoriesTitle = ViewBindings.findChildViewById(rootView, id);
+      if (bookmarkedStoriesTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.bookmarks_container;
+      LinearLayout bookmarksContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bookmarksContainer == null) {
+        break missingId;
+      }
+
       id = R.id.breaking_news_recycler;
       RecyclerView breakingNewsRecycler = ViewBindings.findChildViewById(rootView, id);
       if (breakingNewsRecycler == null) {
@@ -125,21 +161,28 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.no_bookmarks_text;
+      TextView noBookmarksText = ViewBindings.findChildViewById(rootView, id);
+      if (noBookmarksText == null) {
+        break missingId;
+      }
+
       id = R.id.notification_text;
       TextView notificationText = ViewBindings.findChildViewById(rootView, id);
       if (notificationText == null) {
         break missingId;
       }
 
-      id = R.id.tab_layout;
+      id = R.id.tabLayout;
       TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
       if (tabLayout == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, breakingNewsRecycler,
-          breakingNewsTitle, latestStoriesContainer, latestStoriesRecycler, latestStoriesTitle,
-          magazineContainer, notificationText, tabLayout);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, bookmarkedStoriesRecycler,
+          bookmarkedStoriesTitle, bookmarksContainer, breakingNewsRecycler, breakingNewsTitle,
+          latestStoriesContainer, latestStoriesRecycler, latestStoriesTitle, magazineContainer,
+          noBookmarksText, notificationText, tabLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
